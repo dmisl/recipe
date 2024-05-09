@@ -23,4 +23,20 @@ class HomeController extends Controller
             return redirect()->route('home.index');
         }
     }
+    public function store(Request $request)
+    {
+        Recipe::create([
+            'name' => $request->name,
+            'desc' => $request->desc,
+            'ingredients' => $request->ingredients,
+            'instructions' => $request->instructions,
+            'time' => 60
+        ]);
+        return back();
+    }
+    public function delete(Request $request)
+    {
+        Recipe::find($request->id)->delete();
+        return back();
+    }
 }

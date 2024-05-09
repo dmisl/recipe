@@ -4,9 +4,9 @@
 
 @section('content')
 
-<div class="container">
+<div class="container bg-light rounded-4 p-3 mt-5">
 
-    <div class="mt-5 px-5">
+    <div class="px-5">
 
         <a href="{{ route('home.index') }}">Назад</a>
 
